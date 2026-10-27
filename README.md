@@ -18,7 +18,7 @@ Quiz de múltipla escolha sobre **hardware de computadores**, desenvolvido como 
 ## Links
 
 - Site publicado: https://GRUPO.github.io/hardquiz/
-- Repositório: https://github.com/GRUPO/hardquiz
+- Repositório: https://github.com/dossantosferreiralivia-pixel/hardquiz/tree/main
 
 ## Estrutura do projeto
 
