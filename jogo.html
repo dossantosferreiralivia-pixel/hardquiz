@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jogar — HardQuiz</title>
+  <meta name="description" content="Responda às perguntas do HardQuiz sobre hardware.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho">
+    <div class="container">
+      <a class="marca" href="index.html">Hard<span>Quiz</span></a>
+      <nav aria-label="Principal">
+        <ul class="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="jogo.html" aria-current="page">Jogar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" class="jogo">
+    <div class="container">
+
+      <!--
+        CP1: estrutura estática. Os conteúdos abaixo são de exemplo.
+        CP2: o JavaScript vai ler perguntas.json e preencher estes blocos
+        pelos ids (progresso, barra, pergunta-texto, alternativas, feedback...).
+      -->
+
+      <!-- Progresso -->
+      <div class="jogo__topo">
+        <p id="progresso" style="margin:0">Pergunta 1 de 6</p>
+        <p id="placar" style="margin:0">Acertos: 0</p>
+      </div>
+      <progress id="barra" class="barra" value="1" max="6" aria-label="Progresso do quiz">1 de 6</progress>
+
+      <!-- Pergunta -->
+      <section class="pergunta" aria-labelledby="pergunta-texto">
+        <h1 id="pergunta-texto">O que significa a sigla RAM?</h1>
+      </section>
+
+      <!-- Alternativas -->
+      <ol id="alternativas" class="alternativas" aria-label="Alternativas" style="list-style:none">
+        <li><button type="button" class="alternativa" data-indice="0"><span class="alternativa__letra" aria-hidden="true">A</span><span class="alternativa__texto">Memória de Acesso Aleatório (Random Access Memory)</span></button></li>
+        <li><button type="button" class="alternativa" data-indice="1"><span class="alternativa__letra" aria-hidden="true">B</span><span class="alternativa__texto">Registro de Acesso Mínimo (Register Access Minimum)</span></button></li>
+        <li><button type="button" class="alternativa" data-indice="2"><span class="alternativa__letra" aria-hidden="true">C</span><span class="alternativa__texto">Memória de Armazenamento Móvel (Removable Access Memory)</span></button></li>
+        <li><button type="button" class="alternativa" data-indice="3"><span class="alternativa__letra" aria-hidden="true">D</span><span class="alternativa__texto">Rede de Acesso Modular (Radio Access Module)</span></button></li>
+      </ol>
+
+      <!-- Feedback -->
+      <section id="feedback" class="feedback" role="status" aria-live="polite">
+        <h2 id="feedback-titulo">Feedback</h2>
+        <p id="feedback-explicacao">Depois que você responder, a explicação aparece aqui.</p>
+        <p id="feedback-fonte" style="margin:0">Fonte: <a href="https://pt.wikipedia.org/wiki/Mem%C3%B3ria_de_acesso_aleat%C3%B3rio" id="feedback-link">link da fonte</a></p>
+      </section>
+
+      <div class="jogo__acoes">
+        <button type="button" id="proxima" class="botao" disabled>Próxima pergunta</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>HardQuiz — trabalho acadêmico (CP1). Tema: Hardware.</p>
+    </div>
+  </footer>
+</body>
+</html>
