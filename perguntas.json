@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "pergunta": "O que significa a sigla RAM?",
+    "alternativas": [
+      "Memória de Acesso Aleatório (Random Access Memory)",
+      "Registro de Acesso Mínimo (Register Access Minimum)",
+      "Memória de Armazenamento Móvel (Removable Access Memory)",
+      "Rede de Acesso Modular (Radio Access Module)"
+    ],
+    "resposta": 0,
+    "explicacao": "RAM é a memória de trabalho do computador: guarda temporariamente os dados e programas em uso e é muito mais rápida que um HD ou SSD. O conteúdo é perdido quando a energia é desligada.",
+    "fonte": "https://pt.wikipedia.org/wiki/Mem%C3%B3ria_de_acesso_aleat%C3%B3rio"
+  },
+  {
+    "id": 2,
+    "pergunta": "Qual componente é responsável por executar as instruções dos programas, sendo chamado de \"cérebro\" do computador?",
+    "alternativas": [
+      "Placa de vídeo (GPU)",
+      "Processador (CPU)",
+      "Fonte de alimentação",
+      "Memória RAM"
+    ],
+    "resposta": 1,
+    "explicacao": "A CPU (Unidade Central de Processamento) busca, decodifica e executa as instruções dos programas, coordenando o trabalho dos demais componentes.",
+    "fonte": "https://pt.wikipedia.org/wiki/Unidade_central_de_processamento"
+  },
+  {
+    "id": 3,
+    "pergunta": "Qual é a principal diferença entre um SSD e um HD tradicional?",
+    "alternativas": [
+      "O SSD só funciona em notebooks",
+      "O HD não consegue guardar arquivos grandes",
+      "O SSD usa memória flash, sem partes móveis, enquanto o HD usa discos magnéticos giratórios",
+      "O SSD precisa de uma placa de vídeo para funcionar"
+    ],
+    "resposta": 2,
+    "explicacao": "O SSD armazena dados em chips de memória flash e não tem partes mecânicas, o que o torna mais rápido, silencioso e resistente a impactos. O HD grava dados em discos magnéticos que giram.",
+    "fonte": "https://pt.wikipedia.org/wiki/Unidade_de_estado_s%C3%B3lido"
+  },
+  {
+    "id": 4,
+    "pergunta": "Qual é a função da placa-mãe?",
+    "alternativas": [
+      "Resfriar o processador com ar ou líquido",
+      "Converter a corrente alternada da tomada em corrente contínua",
+      "Conectar os componentes do computador e permitir que eles se comuniquem",
+      "Armazenar permanentemente o sistema operacional"
+    ],
+    "resposta": 2,
+    "explicacao": "A placa-mãe é a placa de circuito principal: nela se encaixam CPU, memória RAM, armazenamento e placas de expansão, e suas trilhas e barramentos fazem a comunicação entre eles.",
+    "fonte": "https://pt.wikipedia.org/wiki/Placa-m%C3%A3e"
+  },
+  {
+    "id": 5,
+    "pergunta": "Para que serve principalmente uma GPU?",
+    "alternativas": [
+      "Processar gráficos e realizar cálculos em paralelo",
+      "Guardar as senhas do usuário",
+      "Conectar o computador à internet",
+      "Regular a tensão elétrica da fonte"
+    ],
+    "resposta": 0,
+    "explicacao": "A GPU tem muitos núcleos que trabalham ao mesmo tempo, o que a torna ideal para renderizar imagens e vídeos e também para tarefas paralelas como inteligência artificial.",
+    "fonte": "https://pt.wikipedia.org/wiki/Unidade_de_processamento_gr%C3%A1fico"
+  },
+  {
+    "id": 6,
+    "pergunta": "O que a fonte de alimentação faz dentro do computador?",
+    "alternativas": [
+      "Aumenta a velocidade da memória RAM",
+      "Converte a corrente alternada (CA) da tomada em corrente contínua (CC) para os componentes",
+      "Armazena os arquivos do usuário",
+      "Controla a temperatura do gabinete"
+    ],
+    "resposta": 1,
+    "explicacao": "Os componentes internos funcionam com corrente contínua em baixa tensão. A fonte converte a corrente alternada da tomada e distribui a energia pelas tensões necessárias.",
+    "fonte": "https://pt.wikipedia.org/wiki/Fonte_de_alimenta%C3%A7%C3%A3o"
+  }
+]

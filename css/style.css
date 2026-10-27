@@ -1,0 +1,269 @@
+/* ==========================================================
+   HardQuiz — CSS base
+   Identidade: placa de circuito (substrato azul, contatos dourados,
+   serigrafia branca). Tipografia: Chakra Petch + IBM Plex Sans.
+   ========================================================== */
+
+/* ---------- Tokens ---------- */
+:root {
+  --placa: #0e2a47;        /* substrato da placa */
+  --placa-escura: #07182b; /* fundo profundo */
+  --trilha: #3e7cb1;       /* trilhas de cobre azuladas */
+  --ouro: #f2c14e;         /* contatos dourados (destaque) */
+  --serigrafia: #f3f6f8;   /* fundo claro */
+  --texto: #0b1b2e;        /* texto sobre o fundo claro */
+  --texto-suave: #3a4d63;
+  --acerto: #1f7a50;
+  --erro: #b3283f;
+
+  --fonte-titulo: "Chakra Petch", "Trebuchet MS", system-ui, sans-serif;
+  --fonte-texto: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+
+  --raio: 6px;
+  --espaco: clamp(1rem, 4vw, 2rem);
+  --largura: 68rem;
+}
+
+/* ---------- Reset leve ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--fonte-texto);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--texto);
+  background: var(--serigrafia);
+  overflow-x: hidden; /* garante sem rolagem horizontal */
+}
+img, svg { max-width: 100%; height: auto; }
+h1, h2, h3 {
+  font-family: var(--fonte-titulo);
+  line-height: 1.15;
+  margin: 0 0 .5em;
+  letter-spacing: .01em;
+}
+p { margin: 0 0 1em; max-width: 62ch; }
+a { color: var(--placa); text-underline-offset: 3px; }
+
+/* ---------- Acessibilidade ---------- */
+:focus-visible {
+  outline: 3px solid var(--ouro);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px var(--placa-escura);
+}
+.pular-conteudo {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  background: var(--ouro);
+  color: var(--placa-escura);
+  padding: .6rem 1rem;
+  border-radius: var(--raio);
+  font-weight: 700;
+  z-index: 10;
+}
+.pular-conteudo:focus { top: 1rem; }
+.so-leitor {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+/* ---------- Layout ---------- */
+.container {
+  width: 100%;
+  max-width: var(--largura);
+  margin-inline: auto;
+  padding-inline: var(--espaco);
+}
+main { flex: 1; }
+
+/* ---------- Cabeçalho ---------- */
+.cabecalho {
+  background: var(--placa-escura);
+  color: var(--serigrafia);
+  border-bottom: 3px solid var(--ouro);
+}
+.cabecalho .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem 1.5rem;
+  padding-block: .9rem;
+}
+.marca {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--serigrafia);
+  text-decoration: none;
+}
+.marca span { color: var(--ouro); }
+.menu { display: flex; gap: 1.25rem; list-style: none; margin: 0; padding: 0; }
+.menu a {
+  color: var(--serigrafia);
+  text-decoration: none;
+  padding: .35rem .1rem;
+  border-bottom: 2px solid transparent;
+}
+.menu a:hover, .menu a[aria-current="page"] { border-bottom-color: var(--ouro); }
+
+/* ---------- Botões ---------- */
+.botao {
+  display: inline-block;
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 1.15rem;
+  padding: .85rem 1.75rem;
+  min-height: 48px;
+  border: 2px solid var(--ouro);
+  border-radius: var(--raio);
+  background: var(--ouro);
+  color: var(--placa-escura);
+  text-decoration: none;
+  cursor: pointer;
+}
+.botao:hover { background: #ffd56e; }
+.botao--secundario {
+  background: transparent;
+  color: var(--placa);
+  border-color: var(--placa);
+}
+.botao--secundario:hover { background: var(--placa); color: var(--serigrafia); }
+.botao[disabled] { opacity: .55; cursor: not-allowed; }
+
+/* ---------- Página inicial: hero ---------- */
+.hero {
+  background: var(--placa);
+  color: var(--serigrafia);
+  padding-block: clamp(2rem, 8vw, 5rem);
+}
+.hero .container {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+}
+.hero h1 { font-size: clamp(2.4rem, 8vw, 4.2rem); }
+.hero p { font-size: 1.2rem; color: #dbe6f0; }
+.hero__acoes { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
+.hero .botao--secundario { color: var(--serigrafia); border-color: var(--serigrafia); }
+.hero .botao--secundario:hover { background: var(--serigrafia); color: var(--placa); }
+.chip { width: 100%; max-width: 22rem; justify-self: center; }
+
+@media (min-width: 52rem) {
+  .hero .container { grid-template-columns: 1.2fr .8fr; }
+}
+
+/* ---------- Seções de conteúdo ---------- */
+.secao { padding-block: clamp(2rem, 6vw, 3.5rem); }
+.secao h2 { font-size: clamp(1.5rem, 4vw, 2rem); }
+
+.passos {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: grid;
+  gap: 1rem;
+}
+.passos li {
+  border-left: 4px solid var(--trilha);
+  padding: .25rem 0 .25rem 1rem;
+}
+.passos strong { font-family: var(--fonte-titulo); font-size: 1.15rem; }
+@media (min-width: 46rem) {
+  .passos { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ---------- Tela de jogo ---------- */
+.jogo { padding-block: clamp(1.5rem, 5vw, 3rem); }
+.jogo__topo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem 1rem;
+  margin-bottom: 1rem;
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+}
+.barra {
+  width: 100%;
+  height: 12px;
+  border: 0;
+  border-radius: 99px;
+  overflow: hidden;
+  background: #cfd9e3;
+  accent-color: var(--placa);
+}
+.barra::-webkit-progress-bar { background: #cfd9e3; }
+.barra::-webkit-progress-value { background: var(--placa); }
+.barra::-moz-progress-bar { background: var(--placa); }
+
+.pergunta {
+  background: var(--placa);
+  color: var(--serigrafia);
+  border-radius: var(--raio);
+  padding: clamp(1.25rem, 4vw, 2rem);
+  margin: 1.5rem 0;
+}
+.pergunta h1 { font-size: clamp(1.4rem, 4.5vw, 2rem); margin: 0; }
+
+.alternativas { list-style: none; margin: 0; padding: 0; display: grid; gap: .75rem; }
+.alternativa {
+  display: flex;
+  align-items: flex-start;
+  gap: .9rem;
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  color: var(--texto);
+  background: #fff;
+  border: 2px solid var(--trilha);
+  border-radius: var(--raio);
+  padding: .9rem 1rem;
+  min-height: 56px;
+  cursor: pointer;
+}
+.alternativa:hover { background: #e6eef6; }
+.alternativa__letra {
+  flex: none;
+  display: inline-grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--placa);
+  color: var(--serigrafia);
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+}
+/* Estados que o CP2 vai ativar via classe */
+.alternativa--correta { border-color: var(--acerto); background: #e3f4ec; }
+.alternativa--errada  { border-color: var(--erro);   background: #fbe8ec; }
+
+.feedback {
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem;
+  border: 2px dashed var(--trilha);
+  border-radius: var(--raio);
+  background: #fff;
+}
+.feedback h2 { font-size: 1.15rem; margin-bottom: .35rem; }
+.feedback--acerto { border: 2px solid var(--acerto); }
+.feedback--erro   { border: 2px solid var(--erro); }
+
+.jogo__acoes { margin-top: 1.5rem; display: flex; justify-content: flex-end; }
+
+/* ---------- Rodapé ---------- */
+.rodape {
+  background: var(--placa-escura);
+  color: #c4d2e0;
+  padding-block: 1.25rem;
+  font-size: .95rem;
+}
+.rodape p { margin: 0; max-width: none; }
+.rodape a { color: var(--ouro); }
