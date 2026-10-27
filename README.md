@@ -10,10 +10,10 @@ Quiz de múltipla escolha sobre **hardware de computadores**, desenvolvido como 
 
 | Nome | GitHub |
 |------|--------|
-| Lívia Ferreira | @usuario1 |
-| *Nome do integrante 2* | @usuario2 |
-| *Nome do integrante 2* | @usuario2 |
-| *Nome do integrante 3* | @usuario3 |
+| Lívia Ferreira | @dossantosferreiralivia-pixel |
+| Vinicius Marques | @viniciusmarquesdemendonca@gmail.com |
+| Hugo Trindade | @hugotrindad3 |
+| Alexandre de Paiva Vicco Fontes Junior | @alexandreneagle-blip |
 
 ## Links
 
