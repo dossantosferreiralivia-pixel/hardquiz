@@ -11,7 +11,7 @@ Quiz de múltipla escolha sobre **hardware de computadores**, desenvolvido como 
 | Nome | GitHub |
 |------|--------|
 | Lívia Ferreira | @dossantosferreiralivia-pixel |
-| Vinicius Marques | @viniciusmarquesdemendonca@gmail.com |
+| Vinicius Marques | @viniciusmarquesdemendonca2-eng |
 | Hugo Trindade | @hugotrindad3 |
 | Alexandre de Paiva Vicco Fontes Junior | @alexandreneagle-blip |
 
